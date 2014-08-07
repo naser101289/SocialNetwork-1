@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations;
 
 namespace SocialNetwork.Models
 {
@@ -46,6 +47,8 @@ namespace SocialNetwork.Models
 
     public class UserLikeState
     {
+        [Key]
+        public int LikeId { get; set; }
         public ApplicationUser User { get; set; }
         public Exercise Exercise { get; set; }
         public int Score { get; set; }
