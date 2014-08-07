@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace SocialNetwork.Models
 {
@@ -13,5 +14,11 @@ namespace SocialNetwork.Models
             : base("DefaultConnection")
         {
         }
+
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Content> Contents { get; set; }
     }
 }
